@@ -1,0 +1,6 @@
+.DS_Store
+packages/sfml*
+include/*
+lib/*
+.ccls-cache/
+src/debug/*
