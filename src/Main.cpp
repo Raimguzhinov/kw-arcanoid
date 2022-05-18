@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 
 #include "Ball.cpp"
 #include "MainWindow.cpp"
@@ -92,6 +93,12 @@ void gameRunning() {  //ф-ция перезагружает игру , если
 }
 
 int main() {
+    sf::Music music;
+    if (!music.openFromFile("audio/music.ogg"))
+        return -1; // error
+    music.play();
+    music.setLoop(true);
+    music.setVolume(20);
     gameRunning();  //запускаем процесс игры
     return 0;
 }
